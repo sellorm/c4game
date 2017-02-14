@@ -24,5 +24,5 @@ A reference class to create a connect 4 game object.
 
 \examples{
 c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
-returns an r5 object
+object instatiation returns an r5 object
 }

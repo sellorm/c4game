@@ -6,7 +6,7 @@
 #' Player 2 Wins!
 #' Moves: 25
 playRandomGame <- function(verbose = FALSE){
-  game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
+  game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1, gamestate = "next")
   randomColumn <- function(){
     return(sample(1:7, 1))
   }
