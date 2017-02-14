@@ -28,6 +28,7 @@ To create your own game object to play with:
 ```
 game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
 ```
+
 This creates a new object called game that you can then interact with.
 
 The `game` object will have the following fields:
