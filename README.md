@@ -46,7 +46,7 @@ game$dropToken(3)
 
 Would drop a token into column 3 for the current user in `game$player`.
 
-At this point, `game$board` will update and `game$gamestate` will report either `next` for "next move" or "Player 1 wins!", and `game$player` also updates to reflect the current player number, either 1 or 2.
+At this point, `game$board` will update, `game$gamestate` will report either `next` for "next move" or "Player 1 wins!", and `game$player` also updates to reflect the current player number, either 1 or 2.
 
 # License
 
