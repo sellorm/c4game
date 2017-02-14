@@ -1,0 +1,12 @@
+Package: c4game
+Type: Package
+Title: Provides a simple model of the popular family game Connect 4
+Version: 0.1.0
+Author: Mark Sellors
+Maintainer: Mark Sellors <rstuff@5vcc.com>
+Description: Provides a simple model of the game Connect 4. Also comes 
+    with several helper functions, to demonstrate functionality or provide
+    foundations upon with fursther enhanced functionaly can be built
+License: MIT
+Encoding: UTF-8
+LazyData: true
