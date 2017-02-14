@@ -22,7 +22,6 @@ To let the computer play itself in a random game:
 playRandomGame()
 ```
 
-```
 To create your own game object to play with:
 
 ```
