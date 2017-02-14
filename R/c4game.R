@@ -13,14 +13,19 @@ c4game <- setRefClass("c4game",
                                     player = "numeric"),
                       methods = list(
                         dropToken = function(colnum){
+                          # need the height of the board in case a non-standard size is specified
                           boardrows <- c(length(board[,1]):1)
+                          # Check each row in reverse to see if it's empty
                           for(boardrow in boardrows){
+                            # Place the token in the first empty slot
                             if( is.na(board[boardrow, colnum]) ){
                               board[boardrow, colnum] <<- player
+                              # check all directions through the placed token for 4 in a row.
                               if( any(rle(board[,colnum])$lengths >= 4) ||
                                   any(rle(board[boardrow,])$lengths >= 4) ||
                                   any(rle(board[row(board) - col(board) == colnum - boardrow ])$lengths >= 4) ||
                                   any(rle(board[row(board) + col(board) == colnum + boardrow ])$lengths >= 4)){
+                                # update the gamestate with player winner
                                 gamestate <<- paste("player", player, "wins")
                                 player <<- 0
                               } else {
