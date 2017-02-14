@@ -6,7 +6,7 @@
 #' @return a reference class (RC/R5) object.
 #' @examples
 #' c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
-#' returns an r5 object
+#' object instatiation returns an r5 object
 c4game <- setRefClass(
   "c4game",
   fields = list(
@@ -17,11 +17,21 @@ c4game <- setRefClass(
   methods = list(
     dropToken = function(colnum) {
       # need the height of the board in case a non-standard size is specified
-      boardwidth <- length(board[,1])
-      if ( !any(x==colnum) ){
+      boardwidth <- length(board[1,])
+      boardheight <- length(board[,1])
+      boardrows <- c(boardheight:1)
+      boardcols <- c(1:boardwidth)
+      tryCatch({
+        colnum <- as.numeric(colnum)
+        is.numeric(colnum)
+      }, warning = function(w) {
+        return()
+      }, error = function(e) {
+        return()
+      })
+      if ( any(boardcols==colnum)==FALSE ){
         return()
       }
-      boardrows <- c(boardwidth:1)
       # Check each row in reverse to see if it's empty
       for (boardrow in boardrows) {
         # Place the token in the first empty slot
