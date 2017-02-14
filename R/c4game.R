@@ -17,7 +17,11 @@ c4game <- setRefClass(
   methods = list(
     dropToken = function(colnum) {
       # need the height of the board in case a non-standard size is specified
-      boardrows <- c(length(board[, 1]):1)
+      boardwidth <- length(board[,1])
+      if ( !any(x==colnum) ){
+        return()
+      }
+      boardrows <- c(boardwidth:1)
       # Check each row in reverse to see if it's empty
       for (boardrow in boardrows) {
         # Place the token in the first empty slot
