@@ -10,3 +10,4 @@ Description: Provides a simple model of the game Connect 4. Also comes
 License: MIT
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1

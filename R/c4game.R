@@ -1,11 +1,12 @@
-#' Add together two numbers.
+#' A reference class to create a connect 4 game object.
 #'
-#' @param x A number.
-#' @param y A number.
-#' @return The sum of \code{x} and \code{y}.
+#' @field board A matrix.
+#' @field y A character.
+#' @field player A number
+#' @return a reference class (RC/R5) object.
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
+#' c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
+#' returns an r5 object
 c4game <- setRefClass("c4game",
                       fields = list(board = "matrix",
                                     gamestate = "character",

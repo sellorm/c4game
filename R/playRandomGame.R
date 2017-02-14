@@ -1,11 +1,10 @@
-#' Add together two numbers.
+#' Plays a random game of connect 4.
 #'
-#' @param x A number.
-#' @param y A number.
-#' @return The sum of \code{x} and \code{y}.
+#' @param verbose = FALSE
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
+#' playRandomGame()
+#' Player 2 Wins!
+#' Moves: 25
 playRandomGame <- function(verbose = FALSE){
   game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
   randomColumn <- function(){

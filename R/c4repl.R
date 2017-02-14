@@ -1,11 +1,8 @@
-#' Add together two numbers.
+#' Starts a simple REPL to play connect 4.
 #'
-#' @param x A number.
-#' @param y A number.
-#' @return The sum of \code{x} and \code{y}.
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
+#' c4repl()
+#' Player1>
 c4repl <- function(){
   # initialise the game
   game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
