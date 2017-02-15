@@ -6,8 +6,8 @@ Author: Mark Sellors
 Maintainer: Mark Sellors <rstuff@5vcc.com>
 Description: Provides a simple model of the game Connect 4. Also comes 
     with several helper functions, to demonstrate functionality or provide
-    foundations upon with fursther enhanced functionaly can be built
-License: MIT
+    foundations upon with fursther enhanced functionaly can be built.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1

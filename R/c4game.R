@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
-#' object instatiation returns an r5 object
+#' # object instatiation returns an r5 object
 c4game <- setRefClass(
   "c4game",
   fields = list(
