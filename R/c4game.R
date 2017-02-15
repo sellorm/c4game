@@ -4,6 +4,7 @@
 #' @field y A character.
 #' @field player A number
 #' @return a reference class (RC/R5) object.
+#' @export
 #' @examples
 #' c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
 #' object instatiation returns an r5 object

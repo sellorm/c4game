@@ -1,6 +1,7 @@
 #' Plays a random game of connect 4.
 #'
 #' @param verbose = FALSE
+#' @export
 #' @examples
 #' playRandomGame()
 #' Player 2 Wins!

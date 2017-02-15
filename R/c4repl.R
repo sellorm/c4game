@@ -1,5 +1,6 @@
 #' Starts a simple REPL to play connect 4.
 #'
+#' @export
 #' @examples
 #' c4repl()
 #' Player1>
