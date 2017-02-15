@@ -3,7 +3,7 @@
 #' @export
 #' @examples
 #' c4repl()
-#' Player1>
+#' # Player1>
 c4repl <- function(){
   # initialise the game
   game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1, gamestate = "next")

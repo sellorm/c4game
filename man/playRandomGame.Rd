@@ -14,6 +14,6 @@ Plays a random game of connect 4.
 }
 \examples{
 playRandomGame()
-Player 2 Wins!
-Moves: 25
+# Player 2 Wins!
+# Moves: 25
 }

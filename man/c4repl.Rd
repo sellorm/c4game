@@ -11,5 +11,5 @@ Starts a simple REPL to play connect 4.
 }
 \examples{
 c4repl()
-Player1>
+# Player1>
 }
