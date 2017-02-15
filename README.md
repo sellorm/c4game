@@ -8,6 +8,13 @@ An R package to provide a simple model of the popular family game Connect 4.
 source("https://install-github.me/sellorm/c4game")
 ```
 
+...or, if you prefer...
+
+```
+devtools::install_github("sellorm/c4game")
+```
+
+
 ## Usage
 
 To play a 2 player game (both human) using the built in REPL ("q" quits):
