@@ -5,7 +5,7 @@ An R package to provide a simple model of the popular family game Connect 4.
 ## Installation
 
 ```
-> source("https://install-github.me/sellorm/c4game")
+source("https://install-github.me/sellorm/c4game")
 ```
 
 ## Usage
