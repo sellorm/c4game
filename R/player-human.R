@@ -3,16 +3,16 @@
 #'
 #' @field name character.
 #'
-#' @export
+#' @export human
+#' @exportClass human
 #'
 #' @examples
-#' \dontrun{
 #' human$new(name="Mark")
-#' }
+#'
 human <- setRefClass(
   "human",
   fields = list(
-    name = "character"),
+    name = "character")
   )
 
 #' Make a human move

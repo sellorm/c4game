@@ -16,7 +16,6 @@ Human player for c4
 
 
 \examples{
-\dontrun{
 human$new(name="Mark")
-}
+
 }
