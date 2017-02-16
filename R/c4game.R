@@ -23,8 +23,8 @@ c4game <- setRefClass(
       # need the height of the board in case a non-standard size is specified
       boardwidth <- length(board[1,])
       boardheight <- length(board[,1])
-      boardrows <- c(boardheight:1)
-      boardcols <- c(1:boardwidth)
+      boardrows <- boardheight:1
+      boardcols <- 1:boardwidth
       tryCatch({
         colnum <- as.numeric(colnum)
         is.numeric(colnum)
