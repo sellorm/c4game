@@ -29,9 +29,9 @@ c4game <- setRefClass(
         colnum <- as.numeric(colnum)
         is.numeric(colnum)
       }, warning = function(w) {
-        return()
+        return(FALSE)
       }, error = function(e) {
-        return()
+        return(FALSE)
       })
       if ( any(boardcols==colnum)==FALSE ){
         return()
@@ -58,7 +58,8 @@ c4game <- setRefClass(
               player <<- 1
             }
           }
-          break
+          # break
+          return(TRUE)
         }
       }
     },
