@@ -5,7 +5,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' randomPlayer$new(name="Bot1")
+#' }
 randomPlayer <- setRefClass(
   "randomPlayer",
 

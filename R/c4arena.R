@@ -11,9 +11,12 @@
 #' @export
 #'
 #' @examples
-#' c4arena(randomPlayer, randomPlayer)
-#'
 #' \dontrun{
+#' p1 <- randomPlayer$new()
+#' p2 <- randomPlayer$new()
+#' c4arena(p1, p2)
+#'
+#'
 #' p1 <- randomPlayer$new(name = "Bob")
 #' p2 <- human$new(name = "Alice")
 #' c4arena(p1, p2)

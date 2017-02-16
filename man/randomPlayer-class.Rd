@@ -16,5 +16,7 @@ Random player for c4
 
 
 \examples{
+\dontrun{
 randomPlayer$new(name="Bot1")
+}
 }

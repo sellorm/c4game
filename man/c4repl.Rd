@@ -10,6 +10,7 @@ c4repl()
 Starts a simple REPL to play connect 4.
 }
 \examples{
+\dontrun{
 c4repl()
-# Player1>
+}
 }
