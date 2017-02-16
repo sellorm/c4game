@@ -58,7 +58,6 @@ c4game <- setRefClass(
               player <<- 1
             }
           }
-          # break
           return(TRUE)
         }
       }
