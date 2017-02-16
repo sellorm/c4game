@@ -67,6 +67,13 @@ c4game <- setRefClass(
     },
     setState = function(x) {
       gamestate <<- x
+    },
+    getWinner = function() {
+      if ( gamestate != "next" ){
+        return(player)
+      } else {
+        return(NULL)
+      }
     }
   )
 )
