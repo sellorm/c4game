@@ -2,12 +2,12 @@
 #'
 #' @field name character.
 #'
-#' @export
+#' @export randomPlayer
+#' @exportClass randomPlayer
 #'
 #' @examples
-#' \dontrun{
 #' randomPlayer$new(name="Bot1")
-#' }
+#'
 randomPlayer <- setRefClass(
   "randomPlayer",
 

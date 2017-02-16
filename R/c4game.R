@@ -4,12 +4,12 @@
 #' @field y A character.
 #' @field player A number
 #' @return a reference class (RC/R5) object.
-#' @export
+#' @export c4game
+#' @exportClass c4game
 #' @examples
-#' \dontrun{
 #' c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1)
-#' object instatiation returns an r5 object
-#' }
+#' # object instatiation returns an r5 object
+#'
 #' @importFrom methods new
 c4game <- setRefClass(
   "c4game",
