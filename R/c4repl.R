@@ -7,7 +7,7 @@
 #' }
 c4repl <- function(){
   # initialise the game
-  game <- c4game$new(board = matrix(, nrow = 6, ncol = 7), player = 1, gamestate = "next")
+  game <- c4game$new(board = matrix(NA, nrow = 6, ncol = 7), player = 1, gamestate = "next")
   print(game$board)
   # start the game
   while(TRUE){
