@@ -49,7 +49,6 @@ c4game <- setRefClass(
             # update the gamestate with player winner
             gamestate <<-
               paste("player", player, "wins")
-            player <<- 0
           } else {
             gamestate <<- "next"
             if (player == 1) {
