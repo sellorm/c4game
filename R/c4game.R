@@ -53,7 +53,6 @@ c4game <- R6Class(
             # update the gamestate with player winner
             self$gamestate =
               paste("player", self$player, "wins")
-            self$player = 0
           } else {
             self$gamestate <<- "next"
             if (self$player == 1) {
