@@ -19,16 +19,22 @@ devtools::install_github("sellorm/c4game")
 
 ## Usage
 
-To play a 2 player game (both human) using the built in REPL ("q" quits):
+To play a game against the random bot using the built in REPL ("q" quits):
 
 ```
 c4repl()
 ```
 
-To let the computer play itself in a random game:
+To play a game against another human:
 
 ```
-playRandomGame()
+c4repl(2)
+```
+
+To let the computer play against itself in a random game:
+
+```
+repl(0)
 ```
 
 To create your own game object to play with:

@@ -2,15 +2,18 @@
 % Please edit documentation in R/c4repl.R
 \name{c4repl}
 \alias{c4repl}
-\title{Starts a simple REPL to play connect 4.}
+\title{Starts a simple REPL to play connect 4.
+A wrapper for c4arena, c4repl allows you to play against R or a friend.}
 \usage{
-c4repl()
+c4repl(players = 1)
+}
+\arguments{
+\item{players}{The number of human players, either 0, 1 or 2. default is 1.}
 }
 \description{
 Starts a simple REPL to play connect 4.
+A wrapper for c4arena, c4repl allows you to play against R or a friend.
 }
 \examples{
-\dontrun{
-c4repl()
-}
+c4repl(0)
 }
