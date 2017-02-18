@@ -22,9 +22,10 @@
 #' p2 <- human$new(name = "Alice")
 #' c4arena(p1, p2)
 #' }
-c4arena <- function(player1, player2, nrow = 6, ncol = 7) {
+c4arena <- function(player1, player2, firstplayer = 1, nrow = 6, ncol = 7) {
 
-  game <- c4game$new(board = matrix(NA_integer_, nrow = nrow, ncol = ncol), player = 1, gamestate = "next")
+  game <- c4game$new(board = matrix(NA_integer_, nrow = nrow, ncol = ncol),
+                     player = firstplayer)
 
   # If it's a class generator create an instance
   if(class(player1) == "refObjectGenerator") {

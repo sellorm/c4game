@@ -18,10 +18,10 @@ c4game <- R6Class(
     board = "matrix",
     gamestate = "character",
     player = "numeric",
-    initialize = function(board, gamestate, player){
+    initialize = function(board, gamestate, player = 1){
       if (!missing(board)) self$board = matrix(NA, nrow = 6, ncol = 7)
       self$gamestate = "next"
-      self$player = 1
+      self$player = player
     },
     dropToken = function(colnum) {
       # need the height of the board in case a non-standard size is specified
