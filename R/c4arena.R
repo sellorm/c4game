@@ -6,6 +6,7 @@
 #' @param player2 Either an instance of a reference class or a reference class generator
 #' @param nrow Number of rows for the board
 #' @param ncol Number of columns for the board
+#' @param firstplayer numeric. 1 or 2, which player goes first?
 #'
 #' @return The game winner number. 1 or 2.
 #' @export
@@ -22,7 +23,7 @@
 #' p2 <- human$new(name = "Alice")
 #' c4arena(p1, p2)
 #' }
-c4arena <- function(player1, player2, firstplayer = 1, nrow = 6, ncol = 7) {
+c4arena <- function(player1, player2, nrow = 6, ncol = 7, firstplayer = 1) {
 
   game <- c4game$new(board = matrix(NA_integer_, nrow = nrow, ncol = ncol),
                      player = firstplayer)
