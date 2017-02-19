@@ -51,10 +51,12 @@ c4arena <- function(player1, player2, nrow = 6, ncol = 7, firstplayer = 1) {
 
     game$dropToken(move)
     if( game$gamestate != "next" ){
-      cat(game$gamestate,"\n")
-      cat("Moves: ", counter, "\n")
+      #cat(game$gamestate,"\n")
+      #cat("Moves: ", counter, "\n")
       break
     }
+
+    if(!(any(is.na(game$board)))) return(0) # stalemate
   }
 
   game$getWinner()
