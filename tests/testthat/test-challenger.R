@@ -23,7 +23,7 @@ test_that("The champion is the best!", {
   cat(tally, fill = TRUE)
   cat(results, fill = TRUE)
 
-  expect_gt(tally[1], tally[2], label = "You didn't win this time. Dust yourself off and go again!")
+  expect_gt(tally["1"], tally["2"], label = "You didn't win this time. Dust yourself off and go again!")
 
 })
 
