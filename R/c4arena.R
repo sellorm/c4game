@@ -29,11 +29,11 @@ c4arena <- function(player1, player2, nrow = 6, ncol = 7, firstplayer = 1) {
                      player = firstplayer)
 
   # If it's a class generator create an instance
-  if(class(player1) == "refObjectGenerator") {
+  if(any(c("R6ClassGenerator", "refObjectGenerator") %in% class(player1))) {
     player1 <- player1$new(name = "player1")
   }
 
-  if(class(player2) == "refObjectGenerator") {
+  if(any(c("R6ClassGenerator", "refObjectGenerator") %in% class(player2))) {
     player2 <- player2$new(name = "player2")
   }
 
