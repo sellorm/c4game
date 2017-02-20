@@ -13,7 +13,7 @@ test_that("The champion is the best!", {
   starter <- sample(1:2, size = ngames, replace = TRUE)
   for (i in seq.int(ngames)) {
 
-    challenger <- sequencePlayer$new(rep(1:7, 6))
+    challenger <- c4dougbot2000::dougbot2000$new()
     champion <- randomPlayer$new()
 
     results[i] <- c4arena(champion, challenger, firstplayer = starter[i])

@@ -12,4 +12,6 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Imports: R6, methods
-Suggests: testthat
+Suggests: testthat,
+    c4dougbot2000
+Remotes: dougmet/c4dougbot2000
