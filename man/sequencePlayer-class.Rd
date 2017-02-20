@@ -4,7 +4,7 @@
 \name{sequencePlayer-class}
 \alias{sequencePlayer-class}
 \alias{sequencePlayer}
-\title{Random player for c4}
+\title{Sequence player for c4}
 \description{
 Give the bot the sequence and it will make the moves. Cyclic repetition means
 it never runs out of ideas.
