@@ -54,11 +54,15 @@ c4game <- R6Class(
             self$gamestate =
               paste("player", self$player, "wins")
           } else {
-            self$gamestate <<- "next"
-            if (self$player == 1) {
-              self$player <<- 2
+            if ( any(is.na(self$board))){
+              self$gamestate <- "next"
             } else {
-              self$player <<- 1
+              self$gamestate <- "stalemate"
+            }
+            if (self$player == 1) {
+              self$player <- 2
+            } else {
+              self$player <- 1
             }
           }
           return(TRUE)
