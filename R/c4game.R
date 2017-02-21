@@ -3,7 +3,7 @@
 #' @field board A matrix.
 #' @field y A character.
 #' @field player A number
-#' @return a reference class (RC/R5) object.
+#' @return an R6 object.
 #' @export c4game
 #' @examples
 #' game <- c4game$new()
@@ -15,13 +15,27 @@
 c4game <- R6Class(
   "c4game",
   public = list(
-    board = "matrix",
-    gamestate = "character",
-    player = "numeric",
-    initialize = function(board, gamestate, player){
-      if (!missing(board)) self$board = matrix(NA, nrow = 6, ncol = 7)
-      self$gamestate = "next"
-      self$player = 1
+    board = NULL,
+    gamestate = NULL,
+    player = NULL,
+    initialize = function(board = NA,
+                          gamestate = NA,
+                          player = NA) {
+      if (!is.matrix(board)) {
+        self$board <- matrix(NA, nrow = 6, ncol = 7)
+      } else {
+        self$board <- board
+      }
+      if (is.na(gamestate)) {
+        self$gamestate <- "next"
+      } else {
+        self$gamestate <- gamestate
+      }
+      if (is.na(player)) {
+        self$player <-  1
+      } else {
+        self$player <- player
+      }
     },
     dropToken = function(colnum) {
       # need the height of the board in case a non-standard size is specified
@@ -37,8 +51,8 @@ c4game <- R6Class(
       }, error = function(e) {
         return(FALSE)
       })
-      if ( any(boardcols==colnum)==FALSE ){
-        return()
+      if (any(boardcols == colnum) == FALSE) {
+        return(FALSE)
       }
       # Check each row in reverse to see if it's empty
       for (boardrow in boardrows) {
@@ -47,14 +61,14 @@ c4game <- R6Class(
           self$board[boardrow, colnum] = self$player
           # check all directions through the placed token for 4 in a row.
           if (any(rle(self$board[, colnum])$lengths >= 4) ||
-              any(rle(self$board[boardrow, ])$lengths >= 4) ||
+              any(rle(self$board[boardrow,])$lengths >= 4) ||
               any(rle(self$board[row(self$board) - col(self$board) == colnum - boardrow])$lengths >= 4) ||
               any(rle(self$board[row(self$board) + col(self$board) == colnum + boardrow])$lengths >= 4)) {
             # update the gamestate with player winner
             self$gamestate =
               paste("player", self$player, "wins")
           } else {
-            if ( any(is.na(self$board))){
+            if (any(is.na(self$board))) {
               self$gamestate <- "next"
             } else {
               self$gamestate <- "stalemate"
@@ -76,7 +90,7 @@ c4game <- R6Class(
       self$gamestate = x
     },
     getWinner = function() {
-      if ( self$gamestate != "next" ){
+      if (self$gamestate != "next") {
         return(self$player)
       } else {
         return(NULL)
