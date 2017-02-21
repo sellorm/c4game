@@ -16,7 +16,7 @@ randomPlayer <- setRefClass(
 
   methods = list(
     make_move = function(board, lastMove) {
-      return(sample(1:7, 1))
+      return(sample(1:ncol(board), 1))
     },
 
     rejected = function(board, lastMove) {

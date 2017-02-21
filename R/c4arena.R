@@ -7,7 +7,7 @@
 #' @param nrow Number of rows for the board
 #' @param ncol Number of columns for the board
 #'
-#' @return Final game state
+#' @return The game winner number. 1 or 2.
 #' @export
 #'
 #' @examples
@@ -55,6 +55,6 @@ c4arena <- function(player1, player2, nrow = 6, ncol = 7) {
     }
   }
 
-  game$gamestate
+  game$getWinner()
 
 }

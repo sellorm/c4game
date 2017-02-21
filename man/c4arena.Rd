@@ -16,7 +16,7 @@ c4arena(player1, player2, nrow = 6, ncol = 7)
 \item{ncol}{Number of columns for the board}
 }
 \value{
-Final game state
+The game winner number. 1 or 2.
 }
 \description{
 Pit two players in a game of c4!
