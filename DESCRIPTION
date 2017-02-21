@@ -8,7 +8,7 @@ Authors@R: c(
     )
 Description: Provides a simple model of the game Connect 4. Also comes 
     with several helper functions, to demonstrate functionality or provide
-    foundations upon with fursther enhanced functionaly can be built.
+    foundations upon with further enhanced functionaly can be built.
 URL: https://github.com/sellorm/c4game
 BugReports: https://github.com/sellorm/c4game/issues
 License: MIT + file LICENSE
