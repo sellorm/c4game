@@ -74,3 +74,12 @@ test_that("we can correctly set player and state", {
   game$setState("teststate")
   expect_equal(game$gamestate, "teststate")
 })
+
+test_that("a stalemate is properly reported", {
+  stalemateBoard <- matrix(c(1, 2, 1, 2, 1, 1, 2,2,2,1,1,2,1,2,2,2,1,2,1,2,1), ncol= 7, nrow = 6)
+  stalemateBoard[1,4] <- NA
+  game <- c4game$new(board = stalemateBoard)
+  game$dropToken(4)
+  expect_equal(game$gamestate, "stalemate")
+  expect_equal(game$getWinner(), 0)
+})

@@ -90,7 +90,9 @@ c4game <- R6Class(
       self$gamestate = x
     },
     getWinner = function() {
-      if (self$gamestate != "next") {
+      if (self$gamestate == "stalemate"){
+        return(0)
+      } else if (self$gamestate != "next") {
         return(self$player)
       } else {
         return(NULL)
