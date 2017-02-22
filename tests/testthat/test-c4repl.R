@@ -2,7 +2,7 @@ library(c4game)
 
 context("c4repl tests")
 
-test_that("that aan unnatended game runs properly", {
+test_that("that an unnatended game runs properly", {
   expect_output(c4repl(0), "*Moves*")
 })
 
