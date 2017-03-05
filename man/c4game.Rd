@@ -9,7 +9,7 @@
 c4game
 }
 \value{
-a reference class (RC/R5) object.
+an R6 object.
 }
 \description{
 A reference class to create a connect 4 game object.

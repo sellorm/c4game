@@ -2,7 +2,7 @@
 
 An R package to provide a simple model of the popular family game Connect 4.
 
-[![Travis-CI Build Status](https://travis-ci.org/sellorm/c4game.svg?branch=master)](https://travis-ci.org/sellorm/c4game)
+[![Travis-CI Build Status](https://travis-ci.org/sellorm/c4game.svg?branch=master)](https://travis-ci.org/sellorm/c4game) [![Codecov](https://img.shields.io/codecov/c/github/sellorm/c4game.svg)](https://codecov.io/gh/sellorm/c4game/)
 
 ## Installation
 
