@@ -3,7 +3,7 @@ library(c4game)
 context("c4repl tests")
 
 test_that("that an unnatended game runs properly", {
-  expect_output(c4repl(0), "*Moves*")
+  expect_true(c4repl(0) %in% 0:2)
 })
 
 test_that("incorrect start-up params are checked", {
