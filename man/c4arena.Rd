@@ -4,7 +4,7 @@
 \alias{c4arena}
 \title{Pit two players in a game of c4!}
 \usage{
-c4arena(player1, player2, nrow = 6, ncol = 7)
+c4arena(player1, player2, nrow = 6, ncol = 7, firstplayer = 1)
 }
 \arguments{
 \item{player1}{Either an instance of a reference class or a reference class generator}
@@ -14,6 +14,8 @@ c4arena(player1, player2, nrow = 6, ncol = 7)
 \item{nrow}{Number of rows for the board}
 
 \item{ncol}{Number of columns for the board}
+
+\item{firstplayer}{numeric. 1 or 2, which player goes first?}
 }
 \value{
 The game winner number. 1 or 2.

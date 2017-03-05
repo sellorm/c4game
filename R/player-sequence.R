@@ -1,4 +1,4 @@
-#' Random player for c4
+#' Sequence player for c4
 #'
 #' Give the bot the sequence and it will make the moves. Cyclic repetition means
 #' it never runs out of ideas.
